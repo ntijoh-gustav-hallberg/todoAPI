@@ -27,7 +27,7 @@ namespace TodoApi.Controllers
 
         //Get TODOs with Comments (include = join) from DB
         var todoItems = await _context.TodoItems
-            // .Include(todoItem => todoItem.Comments)
+            .Include(todoItem => todoItem.Comments)
             .ToListAsync();
 
         //Map the TodoItems in DTOs
